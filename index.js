@@ -11,7 +11,7 @@ app.use(cors());
 app.use(router);
 app.use("/uploads", express.static("uploads"));
 
-app.listen(4000, (error) => {
+app.listen(process.env.PORT || 4000, (error) => {
   if (error) {
     return console.log(error);
   }
